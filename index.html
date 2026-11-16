@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Zackary Michaud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <!-- PRÉSENTATION -->
+        <header class="presentation-hero">
+            <h1>Zackary Michaud</h1>
+            <p class="sous-titre">Étudiant en Techniques de l'informatique</p>
+            <p class="bio">
+                Depuis toujours, j'ai une fascination pour les appareils électroniques. 
+                J'ai toujours voulu comprendre comment cela fonctionnait, alors quand je suis arrivé au cégep, 
+                le choix de l'informatique a rapidement été fait. 
+                La réseautique est ce que je préfère le plus dans l'informatique et j'aimerais poursuivre mes études 
+                en cybersécurité après le cégep. Ce portfolio rassemble mon parcours, mes compétences et mes projets réalisés au fil de mon cheminement.
+            </p>
+        </header>
+
+        <!-- ZONE DE CONFIRMATION DU FORMULAIRE -->
+        <div id="alert-success" class="alert-success" style="display: none;"></div>
+
+        <!-- GRILLE DES CARRÉS CLIQUABLES -->
+        <section class="grid-carres">
+            <div class="carre" data-target="modal-scolarite">
+                <div class="carre-icone">🎓</div>
+                <h2>Scolarité et formation</h2>
+                <p>Parcours académique et diplômes</p>
+            </div>
+
+            <div class="carre" data-target="modal-competences">
+                <div class="carre-icone">🧠</div>
+                <h2>Compétences et connaissances</h2>
+                <p>Outils techniques et aptitudes professionnelles</p>
+            </div>
+
+            <div class="carre" data-target="modal-realisations">
+                <div class="carre-icone">🚀</div>
+                <h2>Réalisations</h2>
+                <p>Projets marquants</p>
+            </div>
+
+            <div class="carre" data-target="modal-contact">
+                <div class="carre-icone">✉️</div>
+                <h2>Me contacter</h2>
+                <p>Courriel et formulaire de message</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- MODALE 1 : SCOLARITÉ ET FORMATION -->
+    <div id="modal-scolarite" class="modal-overlay">
+        <div class="modal-box">
+            <button class="close-btn" aria-label="Fermer">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icone">🎓</span>
+                <h2>Scolarité et formation</h2>
+            </div>
+            <div class="modal-body">
+                <div class="item">
+                    <h3>Baccalauréat en cybersécurité</h3>
+                    <h4>Formation future (prévue)</h4>
+                    <span class="badge">2027 - 2030</span>
+                    <p><strong>Université du Québec en Outaouais</strong> — Gatineau</p>
+                </div>
+                <div class="item">
+                    <h3>DEC en Techniques de l'informatique</h3>
+                    <span class="badge">2023 - 2027</span>
+                    <p><strong>Cégep de l'Abitibi-Témiscamingue</strong> — Rouyn-Noranda</p>
+                </div>
+                <div class="item">
+                    <h3>Diplôme d'études secondaires (DES)</h3>
+                    <span class="badge">2018 - 2023</span>
+                    <p><strong>École La Source</strong> — Rouyn-Noranda</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE 2 : COMPÉTENCES ET CONNAISSANCES -->
+    <div id="modal-competences" class="modal-overlay">
+        <div class="modal-box">
+            <button class="close-btn" aria-label="Fermer">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icone">🧠</span>
+                <h2>Compétences et connaissances</h2>
+            </div>
+            <div class="modal-body">
+                <div class="grid-tags">
+                    <div>
+                        <h4>Programmation</h4>
+                        <span class="tag">PHP</span> <span class="tag">HTML</span> <span class="tag">JavaScript</span>
+                        <span class="tag">Python</span> <span class="tag">MySQL</span> <span class="tag">C#</span> 
+                        <span class="tag">C++</span> <span class="tag">PowerShell</span> <span class="tag">Bash</span>
+                    </div>
+                    <div>
+                        <h4>Systèmes d'exploitation et plateformes</h4>
+                        <span class="tag">Windows Server</span> <span class="tag">Windows</span> <span class="tag">Linux</span>
+                        <span class="tag">MikroTik</span> <span class="tag">Cisco</span> <span class="tag">HP ProCurve</span>
+                        <span class="tag">OPNsense</span> <span class="tag">VMware vSphere</span> <span class="tag">Proxmox</span>
+                    </div>
+                    <div>
+                        <h4>Réseautique</h4>
+                        <span class="tag">Wi-Fi</span> <span class="tag">VLAN</span> <span class="tag">OSPF</span> 
+                        <span class="tag">Tunnel VPN (WireGuard et IPsec)</span> <span class="tag">Téléphonie IP</span>
+                        <span class="tag">VRRP</span> <span class="tag">Spanning Tree</span>
+                    </div>
+                </div>
+
+                <p class="intro-modal" style="margin-top: 1.5rem;"><strong>Les compétences que j'ai développées au fil de mon DEC :</strong></p>
+                <ul class="liste-competences">
+                    <li><strong>Gestion d'un parc informatique :</strong> J'ai appris à gérer un parc informatique à l'aide des divers cours de maintenance et de soutien à l'utilisateur.</li>
+                    <li><strong>Gestion d'une salle de serveurs :</strong> J'ai appris à administrer et maintenir une salle de serveurs grâce aux différents cours de réseautique.</li>
+                    <li><strong>Gestion de projet avec Git :</strong> J'ai utilisé et maîtrisé Git dans le cadre de mes cours pour assurer un suivi de projet rigoureux et collaboratif.</li>
+                    <li><strong>Soutien aux utilisateurs :</strong> J'ai appris à diagnostiquer efficacement les problèmes informatiques et à vulgariser les solutions pour bien accompagner les utilisateurs.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE 3 : RÉALISATIONS -->
+    <div id="modal-realisations" class="modal-overlay">
+        <div class="modal-box">
+            <button class="close-btn" aria-label="Fermer">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icone">🚀</span>
+                <h2>Réalisations</h2>
+            </div>
+            <div class="modal-body">
+                <!-- PROJET 1 (Plus récent) -->
+                <div class="projet-card">
+                    <div class="projet-header">
+                        <h3>Construction d'une voiture téléguidée</h3>
+                        <span class="date">Session automne 2026 • Durée : 15 semaines</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Électronique</span> <span class="tag">Programmation</span> <span class="tag">Réseautique</span>
+                    </div>
+                    <!-- REMPLACE L'IMAGE CI-DESSOUS PAR UNE PHOTO DE TON PROJET -->
+                    <img src="https://via.placeholder.com/600x250?text=Photo+de+la+voiture+teleguidee" alt="Voiture téléguidée" class="projet-img">
+                    <p><strong>Description :</strong> Dans le cadre du cours de veille technologique, j'ai décidé de concevoir une voiture téléguidée contrôlée par Wi-Fi. Je la réalise à partir de zéro : j'ai sélectionné et acheté les diverses pièces nécessaires pour l'assembler. Je développe également un logiciel en C++ pour faire communiquer une manette et la voiture entre elles.</p>
+                    <p><strong>Objectifs :</strong> Concevoir et programmer une voiture téléguidée fonctionnelle de A à Z.</p>
+                    <p><strong>Résultats :</strong> L'assemblage matériel est en cours de finalisation, et la partie logicielle (le code de communication et de contrôle) est terminée.</p>
+                    <p><strong>Apprentissages :</strong> J'ai dû apprendre le langage C++ pour programmer le microcontrôleur de la voiture, ainsi que les bases des circuits électriques pour comprendre comment brancher et alimenter les différentes pièces entre elles.</p>
+                </div>
+
+                <!-- PROJET 2 -->
+                <div class="projet-card">
+                    <div class="projet-header">
+                        <h3>Audit de sécurité passif (OSINT)</h3>
+                        <span class="date">Octobre 2026 • Durée : 1 semaine</span>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Cybersécurité</span> <span class="tag">Réseau</span>
+                    </div>
+                    <!-- REMPLACE L'IMAGE CI-DESSOUS PAR UNE CAPTURE DE TON RAPPORT/SCHÉMA -->
+                    <img src="https://via.placeholder.com/600x250?text=Capture+de+l'audit+OSINT" alt="Audit de sécurité OSINT" class="projet-img">
+                    <p><strong>Description :</strong> Je devais effectuer des recherches publiques sur une entreprise choisie (Technosub), sans jamais interagir directement avec ses systèmes — c'est-à-dire sans effectuer de scans actifs ni tenter d'intrusion sur leur site web.</p>
+                    <p><strong>Objectifs :</strong> Cartographier l'infrastructure web et physique publique afin d'identifier d'éventuelles failles ou fuites d'informations pouvant exposer des données sensibles.</p>
+                    <p><strong>Résultats :</strong> L'infrastructure de Technosub s'est révélée très bien sécurisée ; les seules informations sensibles exposées publiquement concernaient les adresses personnelles de certains dirigeants.</p>
+                    <p><strong>Apprentissages :</strong> Suivre une méthodologie d'enquête stricte et légale, et maîtriser différents outils de renseignement de sources ouvertes (OSINT).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE 4 : CONTACT -->
+    <div id="modal-contact" class="modal-overlay">
+        <div class="modal-box">
+            <button class="close-btn" aria-label="Fermer">&times;</button>
+            <div class="modal-header">
+                <span class="modal-icone">✉️</span>
+                <h2>Me contacter</h2>
+            </div>
+            <div class="modal-body">
+                <p>Intéressé par mon profil pour un stage ou une collaboration ? Écrivez-moi directement :</p>
+                <p class="email-direct" style="margin: 0.8rem 0;">📧 <strong>ton.nom@courriel.com</strong></p>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" id="contact-nom" name="nom" placeholder="Votre nom" required>
+                    <input type="email" id="contact-email" name="email" placeholder="Votre adresse courriel" required>
+                    <textarea id="contact-message" name="message" rows="4" placeholder="Votre message..." required></textarea>
+                    <button type="submit">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
