@@ -1,0 +1,229 @@
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --card-hover: #334155;
+    --accent: #38bdf8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Présentation */
+.presentation-hero {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border-left: 5px solid var(--accent);
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.presentation-hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.2rem;
+}
+
+.sous-titre {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    color: var(--text-muted);
+    max-width: 800px;
+}
+
+/* Grille des 6 carrés */
+.grid-carres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.carre {
+    background: var(--card-bg);
+    aspect-ratio: 1 / 0.85; /* Donne une forme proche du carré */
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.carre:hover {
+    transform: translateY(-6px);
+    background: var(--card-hover);
+    border-color: var(--accent);
+}
+
+.carre-icone {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.carre h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.carre p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Superposition (Modale) */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-box {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 750px;
+    max-height: 85vh;
+    border-radius: 16px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    padding: 2rem;
+    position: relative;
+    overflow-y: auto;
+    transform: scale(0.95);
+    transition: transform 0.25s ease;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.modal-overlay.active .modal-box {
+    transform: scale(1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    color: var(--accent);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-icone {
+    font-size: 2rem;
+}
+
+/* Contenu interne des modales */
+.item, .projet-card {
+    background: rgba(15, 23, 42, 0.5);
+    padding: 1.2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.badge, .tag {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    margin: 0.3rem 0.2rem 0.5rem 0;
+}
+
+.projet-img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 0.8rem 0;
+}
+
+.liste-competences li {
+    margin-bottom: 0.8rem;
+    margin-left: 1.2rem;
+}
+
+/* Formulaire */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    background: var(--bg-color);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: white;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.contact-form button {
+    background: var(--accent);
+    color: #0f172a;
+    font-weight: bold;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.alert-success {
+    background: #065f46;
+    color: #d1fae5;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
